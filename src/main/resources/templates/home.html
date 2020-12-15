@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>home</title>
+    <style>
+        #box{
+            width:100vw;
+            height:100vh;
+            background: url('temMain.png') no-repeat;
+            background-size: 100% 100%;
+            text-align: center;}
+        #p1{
+            position:absolute;
+            width:50vw;
+            height:30vh;
+            margin-top:38vh;
+        }
+        #p2{
+            position:absolute;
+            width:50vw;
+            height:30vh;
+            margin-left:50vw;
+            margin-top:38vh;
+        }
+    </style>
+
 </head>
 <body>
-<p><a href = "/members/new">회원 가입</a></p>
-<p><a href = "/members">회원 목록</a></p>
+<div id="box">
+    <p id="p1"><a href = "/members/new">회원 가입</a></p>
+    <p id="p2"><a href = "/members">회원 목록</a></p>
+</div>
 </body>
 </html>

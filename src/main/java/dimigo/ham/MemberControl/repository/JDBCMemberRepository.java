@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-
+//jdbc 활용 -- jpa로 대체가능
 public class JDBCMemberRepository implements MemberRepository {
 
     private DataSource dataSource;
