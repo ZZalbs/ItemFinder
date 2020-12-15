@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body { padding: 0px; margin: 0px;}
+        #back {text-align: center;}
+        #button1 {
+            position:absolute;
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            outline:none;
+            width:200px;
+            height:100px;
+            margin-left:-100px;
+            margin-top:-150px;
+        }
+        #button2 {
+            text-align: center;
+            color:blue;
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            position:absolute;
+            width:130px;
+            height:30px;
+            margin-left:-65px;
+            margin-top:-55px;
+        }
+        #box{
+            width:100vw;
+            height:100vh;
+            background: url('rift.png') no-repeat;
+            background-size: 100% 100%;
+            text-align: center;}
+    </style>
+</head>
+<body>
+<script>
+    function start()
+    {
+        location.href="home.html";
+    }
+    function end()
+    {
+        window.opener='Self';
+        window.open('','_parent','');
+        window.close();
+    }
+</script>
+<div id="box">
+        <img src="itemMain.png" width="600" height="600">
+    <div id="back">
+        <button id="button1" type="button" onclick="start()"></button>
+        <button id="button2" type="button" onclick="end()"></button>
+    </div>
+</div>
+
+</body>
+</html>
