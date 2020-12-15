@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -35,7 +35,7 @@
         #box{
             width:100vw;
             height:100vh;
-            background: url('rift.png') no-repeat;
+            background: url('images/rift.png') no-repeat;
             background-size: 100% 100%;
             text-align: center;}
     </style>
@@ -44,7 +44,7 @@
 <script>
     function start()
     {
-        location.href="home.html";
+        location.href="/home";
     }
     function end()
     {
@@ -54,7 +54,7 @@
     }
 </script>
 <div id="box">
-        <img src="itemMain.png" width="600" height="600">
+        <img th:src="@{/images/itemMain.png}" width="600" height="600">
     <div id="back">
         <button id="button1" type="button" onclick="start()"></button>
         <button id="button2" type="button" onclick="end()"></button>

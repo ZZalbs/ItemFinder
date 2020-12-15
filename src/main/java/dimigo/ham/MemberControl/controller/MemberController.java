@@ -29,8 +29,14 @@ public class MemberController {
     {
        Member m = new Member();
        m.setName(mf.getName());
+       m.setId1(mf.getId1());
+       m.setId2(mf.getId2());
+       m.setId3(mf.getId3());
+       m.setId4(mf.getId4());
+       m.setId5(mf.getId5());
+       m.setId6(mf.getId6());
        ms.register(m);
-       return "redirect:/";
+       return "redirect:/home";
     }
     @GetMapping("/members")
     public String memberList(Model model)
