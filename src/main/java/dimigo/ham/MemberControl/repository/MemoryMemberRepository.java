@@ -3,6 +3,7 @@ package dimigo.ham.MemberControl.repository;
 import dimigo.ham.MemberControl.domain.Member;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.EntityManager;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +13,6 @@ public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Integer,Member> mList = new HashMap<>();
     private static int count = 0;
-
     @Override
     public Member save(Member member) {
         member.setID(++count);
