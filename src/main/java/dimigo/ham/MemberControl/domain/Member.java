@@ -6,77 +6,77 @@ import javax.persistence.*;
 public class Member {
 
     @Id @GeneratedValue(strategy  = GenerationType.IDENTITY)
-    int ID;
-    String Name;
-    int ItemID1;
-    int ItemID2;
-    int ItemID3;
-    int ItemID4;
-    int ItemID5;
-    int ItemID6;
+    int id;
+    String name;
+    int itemID1;
+    int itemID2;
+    int itemID3;
+    int itemID4;
+    int itemID5;
+    int itemID6;
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int ID) {
+        this.id = ID;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String Name) {
-        this.Name = Name;
+        this.name = Name;
     }
 
     public int getItemID1() {
-        return ItemID1;
+        return itemID1;
     }
 
     public void setItemID1(int ItemID1) {
-        this.ItemID1 = ItemID1;
+        this.itemID1 = ItemID1;
     }
 
     public int getItemID2() {
-        return ItemID2;
+        return itemID2;
     }
 
     public void setItemID2(int ItemID2) {
-        this.ItemID2 = ItemID2;
+        this.itemID2 = ItemID2;
     }
 
     public int getItemID3() {
-        return ItemID3;
+        return itemID3;
     }
 
     public void setItemID3(int ItemID3) {
-        this.ItemID3 = ItemID3;
+        this.itemID3 = ItemID3;
     }
 
     public int getItemID4() {
-        return ItemID4;
+        return itemID4;
     }
 
     public void setItemID4(int ItemID4) {
-        this.ItemID4 = ItemID4;
+        this.itemID4 = ItemID4;
     }
 
     public int getItemID5() {
-        return ItemID5;
+        return itemID5;
     }
 
     public void setItemID5(int ItemID5) {
-        this.ItemID5 = ItemID5;
+        this.itemID5 = ItemID5;
     }
 
     public int getItemID6() {
-        return ItemID6;
+        return itemID6;
     }
 
     public void setItemID6(int ItemID6) {
-        this.ItemID6 = ItemID6;
+        this.itemID6 = ItemID6;
     }
 
 
