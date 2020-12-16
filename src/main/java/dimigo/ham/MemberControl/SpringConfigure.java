@@ -1,6 +1,6 @@
 package dimigo.ham.MemberControl;
 
-import dimigo.ham.MemberControl.repository.JDBCMemberRepository;
+//import dimigo.ham.MemberControl.repository.JDBCMemberRepository;
 import dimigo.ham.MemberControl.repository.JPAMemberRepository;
 import dimigo.ham.MemberControl.repository.MemberRepository;
 import dimigo.ham.MemberControl.repository.MemoryMemberRepository;

@@ -1,10 +1,12 @@
 package dimigo.ham.MemberControl.repository;
 
 import dimigo.ham.MemberControl.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import java.util.ArrayList;
-
+//@Repository
 public class JPAMemberRepository implements MemberRepository{
 
     private EntityManager em;
@@ -16,6 +18,7 @@ public class JPAMemberRepository implements MemberRepository{
     @Override
     public Member save(Member member) {
         em.persist(member);
+
         return member;
     }
 

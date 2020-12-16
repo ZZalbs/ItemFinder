@@ -1,85 +1,82 @@
 package dimigo.ham.MemberControl.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity
+@Entity @Table(name="itemset")
 public class Member {
 
     @Id @GeneratedValue(strategy  = GenerationType.IDENTITY)
-    int id;
-    String name;
-    int id1;
-    int id2;
-    int id3;
-    int id4;
-    int id5;
-    int id6;
+    int ID;
+    String Name;
+    int ItemID1;
+    int ItemID2;
+    int ItemID3;
+    int ItemID4;
+    int ItemID5;
+    int ItemID6;
 
-    public int getId() {
-        return id;
+    public int getID() {
+        return ID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
-    public int getId1() {
-        return id1;
+    public int getItemID1() {
+        return ItemID1;
     }
 
-    public void setId1(int id1) {
-        this.id1 = id1;
+    public void setItemID1(int ItemID1) {
+        this.ItemID1 = ItemID1;
     }
 
-    public int getId2() {
-        return id2;
+    public int getItemID2() {
+        return ItemID2;
     }
 
-    public void setId2(int id2) {
-        this.id2 = id2;
+    public void setItemID2(int ItemID2) {
+        this.ItemID2 = ItemID2;
     }
 
-    public int getId3() {
-        return id3;
+    public int getItemID3() {
+        return ItemID3;
     }
 
-    public void setId3(int id3) {
-        this.id3 = id3;
+    public void setItemID3(int ItemID3) {
+        this.ItemID3 = ItemID3;
     }
 
-    public int getId4() {
-        return id4;
+    public int getItemID4() {
+        return ItemID4;
     }
 
-    public void setId4(int id4) {
-        this.id4 = id4;
+    public void setItemID4(int ItemID4) {
+        this.ItemID4 = ItemID4;
     }
 
-    public int getId5() {
-        return id5;
+    public int getItemID5() {
+        return ItemID5;
     }
 
-    public void setId5(int id5) {
-        this.id5 = id5;
+    public void setItemID5(int ItemID5) {
+        this.ItemID5 = ItemID5;
     }
 
-    public int getId6() {
-        return id6;
+    public int getItemID6() {
+        return ItemID6;
     }
 
-    public void setId6(int id6) {
-        this.id6 = id6;
+    public void setItemID6(int ItemID6) {
+        this.ItemID6 = ItemID6;
     }
 
 

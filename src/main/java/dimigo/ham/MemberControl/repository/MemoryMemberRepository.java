@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-//@Repository
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Integer,Member> mList = new HashMap<>();
@@ -15,8 +15,9 @@ public class MemoryMemberRepository implements MemberRepository {
 
     @Override
     public Member save(Member member) {
-        member.setId(++count);
-        mList.put(member.getId(),member);
+        member.setID(++count);
+        mList.put(member.getID(),member);
+        System.out.println(member.getItemID1()+member.getItemID2()+member.getItemID3());
         return member;
     }
 
