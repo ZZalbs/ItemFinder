@@ -30,19 +30,19 @@ public class MemberController {
     @PostMapping("/members/new")
     public String register(MemberForm mf)
     {
-       Member m = new Member();
-       m.setName(mf.getName());
-       m.setItemID1(mf.getItemID1());
-       m.setItemID2(mf.getItemID2());
-       m.setItemID3(mf.getItemID3());
-       m.setItemID4(mf.getItemID4());
-       m.setItemID5(mf.getItemID5()); 
-       m.setItemID6(mf.getItemID6());
-       //m애는 mf의 받아온 값이 들어가있음
-       ms.register(m);
-       System.out.println(1);
+        Member m = new Member();
+        m.setName(mf.getName());
+        m.setItemID1(mf.getItemID1());
+        m.setItemID2(mf.getItemID2());
+        m.setItemID3(mf.getItemID3());
+        m.setItemID4(mf.getItemID4());
+        m.setItemID5(mf.getItemID5());
+        m.setItemID6(mf.getItemID6());
+        //m애는 mf의 받아온 값이 들어가있음
+        ms.register(m);
+        System.out.println(1);
 
-       return "redirect:/home";
+        return "redirect:/home";
     }
     @GetMapping("/members")
     public String memberList(Model model)
@@ -55,8 +55,7 @@ public class MemberController {
     @GetMapping("/item")
     public String itemList(Model model)
     {
-        ArrayList<Member> m = is.findMembers();
-        model.addAttribute("list",m);
+        //model.addAttribute("list",m);
         return "itemList";
     }
 
