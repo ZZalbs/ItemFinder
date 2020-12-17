@@ -2,6 +2,7 @@ package dimigo.ham.MemberControl.controller;
 
 import dimigo.ham.MemberControl.domain.Member;
 import dimigo.ham.MemberControl.service.MemberService;
+import dimigo.ham.MemberControl.service.ItemMemberService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,9 +14,9 @@ import java.util.ArrayList;
 public class MemberController {
 
     private  MemberService ms;
-    private itemService is;
+    private ItemMemberService is;
 
-    public MemberController(MemberService ms,itemService is) {
+    public MemberController(MemberService ms,ItemMemberService is) {
         this.ms = ms;
         this.is=is;
     }
