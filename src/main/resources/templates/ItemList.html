@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each = "itemMember : ${list}">
+        <td th:text="${itemMember.id}"></td>
+        <td th:text="${itemMember.name}"></td>
+        <td th:text="${itemMember.text}"></td>
+        <td th:text="${itemMember.hp}"></td>
+        <td th:text="${itemMember.ad}"></td>
+        <td th:text="${itemMember.ap}"></td>
+        <td th:text="${itemMember.armor}"></td>
+        <td th:text="${itemMember.magic_resistence}"></td>
+        <td th:text="${itemMember.cooldown}"></td>
+        <td><img src=th:text="${itemMember.src}" width="100px" height="100px"></td>
+    </tr>
+    </tbody>
+
+</table>
+
+</body>
+</html>

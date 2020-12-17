@@ -13,9 +13,11 @@ import java.util.ArrayList;
 public class MemberController {
 
     private  MemberService ms;
+    private itemService is;
 
-    public MemberController(MemberService ms) {
+    public MemberController(MemberService ms,itemService is) {
         this.ms = ms;
+        this.is=is;
     }
 
     @GetMapping("/members/new")
@@ -33,8 +35,9 @@ public class MemberController {
        m.setItemID2(mf.getItemID2());
        m.setItemID3(mf.getItemID3());
        m.setItemID4(mf.getItemID4());
-       m.setItemID5(mf.getItemID5());
+       m.setItemID5(mf.getItemID5()); 
        m.setItemID6(mf.getItemID6());
+       //m애는 mf의 받아온 값이 들어가있음
        ms.register(m);
        System.out.println(1);
 
@@ -47,4 +50,13 @@ public class MemberController {
         model.addAttribute("list",m);
         return "memberList";
     }
+
+    @GetMapping("/item")
+    public String itemList(Model model)
+    {
+        ArrayList<Member> m = is.findMembers();
+        model.addAttribute("list",m);
+        return "itemList";
+    }
+
 }
