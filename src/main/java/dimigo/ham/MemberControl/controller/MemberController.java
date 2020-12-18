@@ -1,5 +1,6 @@
 package dimigo.ham.MemberControl.controller;
 
+import dimigo.ham.MemberControl.domain.ItemMember;
 import dimigo.ham.MemberControl.domain.Member;
 import dimigo.ham.MemberControl.service.MemberService;
 import dimigo.ham.MemberControl.service.ItemMemberService;
@@ -55,8 +56,9 @@ public class MemberController {
     @GetMapping("/item")
     public String itemList(Model model)
     {
-        //model.addAttribute("list",m);
-        return "itemList";
+        ArrayList<ItemMember> im = is.findMembers();
+        model.addAttribute("list",m);
+        return "ItemList";
     }
 
 }
