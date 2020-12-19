@@ -2,6 +2,7 @@ package dimigo.ham.MemberControl;
 
 //import dimigo.ham.MemberControl.repository.JDBCMemberRepository;
 import dimigo.ham.MemberControl.repository.ItemMemberRepository;
+
 import dimigo.ham.MemberControl.repository.MemberRepository;
 import dimigo.ham.MemberControl.service.ItemMemberService;
 import dimigo.ham.MemberControl.service.MemberService;
@@ -21,9 +22,8 @@ public class SpringConfigure {
     private MemberRepository memberRepository;
     private ItemMemberRepository itemmemberRepository;
 
-    public SpringConfigure(MemberRepository memberRepository, ItemMemberRepository itemmemberRepository) {
+    public SpringConfigure(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
-        this.itemmemberRepository=itemmemberRepository;
     }
 
     @Bean
