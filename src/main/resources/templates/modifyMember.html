@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--아이템세트 수정하는 곳. 멤버 리스트 또한 이곳에서 볼 수 있음-->
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
+<!--아이템세트 수정-->
 <form action = "/members/modify" method = "post">
     바꿀 템세트 번호 : <input type = "text" id = "ID" name = "ID"><br>
     이름 변경 : <input type = "text" id = "Name" name = "Name"><br>
@@ -17,6 +20,7 @@
     <input type = "submit" value = "등록">
 </form>
 
+<!--멤버 리스트-->
 <table>
     <thead>
     <tr>
