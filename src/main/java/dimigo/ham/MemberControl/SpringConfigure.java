@@ -2,9 +2,7 @@ package dimigo.ham.MemberControl;
 
 //import dimigo.ham.MemberControl.repository.JDBCMemberRepository;
 import dimigo.ham.MemberControl.repository.ItemMemberRepository;
-import dimigo.ham.MemberControl.repository.JPAMemberRepository;
 import dimigo.ham.MemberControl.repository.MemberRepository;
-import dimigo.ham.MemberControl.repository.MemoryMemberRepository;
 import dimigo.ham.MemberControl.service.ItemMemberService;
 import dimigo.ham.MemberControl.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +21,9 @@ public class SpringConfigure {
     private MemberRepository memberRepository;
     private ItemMemberRepository itemmemberRepository;
 
-    public SpringConfigure(MemberRepository memberRepository) {
+    public SpringConfigure(MemberRepository memberRepository, ItemMemberRepository itemmemberRepository) {
         this.memberRepository = memberRepository;
+        this.itemmemberRepository=itemmemberRepository;
     }
 
     @Bean
