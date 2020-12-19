@@ -59,20 +59,22 @@ public class MemberController {
         ArrayList<Member> m = ms.findMembers();
         ArrayList<ItemMember> im = is.findMembers();
         ArrayList<ItemMember> I = new ArrayList<ItemMember>();
+
         for (int j=0;j<m.size();j++) {
 
-            I.add(is.findOneMember(m.get(0).getItemID1()));
-            I.add(is.findOneMember(m.get(0).getItemID2()));
-            I.add(is.findOneMember(m.get(0).getItemID3()));
-            I.add(is.findOneMember(m.get(0).getItemID4()));
-            I.add(is.findOneMember(m.get(0).getItemID5()));
-            I.add(is.findOneMember(m.get(0).getItemID6()));
+            I.add(is.findOneMember(m.get(j).getItemID1()));
+            I.add(is.findOneMember(m.get(j).getItemID2()));
+            I.add(is.findOneMember(m.get(j).getItemID3()));
+            I.add(is.findOneMember(m.get(j).getItemID4()));
+            I.add(is.findOneMember(m.get(j).getItemID5()));
+            I.add(is.findOneMember(m.get(j).getItemID6()));
             //Ghost g1=new Ghost(m.get(j),I);
             //g.add(g1);
+
         }
+        System.out.println(I.get(0).getId());
         model.addAttribute("list",m);
-        model.addAttribute("item",I);
-        I.clear();
+        model.addAttribute("items",I);
         return "memberList";
     }
 
