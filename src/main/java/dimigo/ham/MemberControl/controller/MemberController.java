@@ -52,7 +52,7 @@ public class MemberController {
         ArrayList<Member> m = ms.findMembers();
         ArrayList<ItemMember> im = is.findMembers();
         model.addAttribute("list",m);
-        model.addAttribute("item",im);
+        model.addAttribute("items",im);
         return "memberList";
     }
 
