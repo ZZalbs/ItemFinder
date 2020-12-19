@@ -45,12 +45,38 @@ public class MemberController {
 
         return "redirect:/home"; // home 화면으로 복귀
     }
+
     @GetMapping("/members") // 멤버 전체를 불러오는 함수
     public String memberList(Model model)
     {
         ArrayList<Member> m = ms.findMembers();
         model.addAttribute("list",m);
-        return "memberList";
+        return "memberList";    
+    }
+
+    @GetMapping("/members/modify") // 멤버 회원가입창 오픈
+    public String modifyMember()
+    {
+        return "modifyMember";
+    }
+
+    @PostMapping("/members/modify") // 멤버 회원가입 함수
+    public String modifyMember(MemberForm mf,Model model,int id)
+    {
+        ArrayList<Member> mlist = ms.findMembers();
+        model.addAttribute("list",mlist);
+        Member m = ms.findOneMember(id);
+        if(m!=null) {
+            m.setItemID1(mf.getItemID1());
+            m.setItemID2(mf.getItemID2());
+            m.setItemID3(mf.getItemID3());
+            m.setItemID4(mf.getItemID4());
+            m.setItemID5(mf.getItemID5());
+            m.setItemID6(mf.getItemID6());
+            //m애는 mf의 받아온 값이 들어가있음
+        }
+        else System.out.println("해당 멤버는 존재하지 않습니다.");
+        return "redirect:/home"; // home 화면으로 복귀
     }
 
     @GetMapping("/item") // 아이템 목록 전체를 불러오는 함수
