@@ -15,7 +15,21 @@
     </tr>
     </thead>
     <tbody>
-        <tr th:each = "member : ${list}">
+    <th:block th:object="${Member}">
+        <tr th:each = "mem : ${list}">
+            <td th:text="${mem.m.id}"></td>
+            <td th:text="${mem.m.name}"></td>
+            <td th:text="${mem.items.name}"></td>
+            <td th:text="${mem.items.text}"></td>
+            <td th:text="${mem.items.hp}"></td>
+            <td th:text="${mem.items.ad}"></td>
+            <td th:text="${mem.items.ap}"></td>
+            <td th:text="${member.items.armor}"></td>
+            <td th:text="${member.items.magic_resistance}"></td>
+            <td th:text="${member.items.cooldown}"></td>
+            <td><img th:src="@{${member.items.src}}" width="100px" height="100px"></td>
+        </tr>
+    </th:block>
     </tbody>
 </table>
 

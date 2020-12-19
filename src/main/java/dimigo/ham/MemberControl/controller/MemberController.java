@@ -59,7 +59,7 @@ public class MemberController {
         ArrayList<Member> m = ms.findMembers();
         ArrayList<ItemMember> im = is.findMembers();
         ArrayList<Ghost> g=new ArrayList<Ghost>();
-
+        Member newm = new Member();
         for (int j=0;j<m.size();j++) {
             ArrayList<ItemMember> I = new ArrayList<ItemMember>();
             I.add(is.findOneMember(m.get(0).getItemID1()));
