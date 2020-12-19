@@ -22,13 +22,13 @@ public class MemberController {
         this.is=is;
     }
 
-    @GetMapping("/members/new")
+    @GetMapping("/members/new") // 멤버 회원가입창 오픈
     public String registerMember()
     {
         return "registerMember";
     }
 
-    @PostMapping("/members/new")
+    @PostMapping("/members/new") // 멤버 회원가입 함수
     public String register(MemberForm mf)
     {
         Member m = new Member();
@@ -43,9 +43,9 @@ public class MemberController {
         ms.register(m);
         System.out.println(1);
 
-        return "redirect:/home";
+        return "redirect:/home"; // home 화면으로 복귀
     }
-    @GetMapping("/members")
+    @GetMapping("/members") // 멤버 전체를 불러오는 함수
     public String memberList(Model model)
     {
         ArrayList<Member> m = ms.findMembers();
@@ -53,7 +53,7 @@ public class MemberController {
         return "memberList";
     }
 
-    @GetMapping("/item")
+    @GetMapping("/item") // 아이템 목록 전체를 불러오는 함수
     public String itemList(Model model)
     {
         ArrayList<ItemMember> im = is.findMembers();
