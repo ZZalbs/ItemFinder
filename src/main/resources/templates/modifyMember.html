@@ -25,17 +25,9 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each = "itemMember : ${list}">
-        <td th:text="${itemMember.id}"></td>
-        <td th:text="${itemMember.name}"></td>
-        <td th:text="${itemMember.text}"></td>
-        <td th:text="${itemMember.hp}"></td>
-        <td th:text="${itemMember.ad}"></td>
-        <td th:text="${itemMember.ap}"></td>
-        <td th:text="${itemMember.armor}"></td>
-        <td th:text="${itemMember.magic_resistance}"></td>
-        <td th:text="${itemMember.cooldown}"></td>
-        <td><img th:src="@{${itemMember.src}}" width="100px" height="100px"></td>
+    <tr th:each = "member : ${list}">
+        <td th:text="${member.id}"></td>
+        <td th:text="${member.name}"></td>
     </tr>
     </tbody>
 </table>
