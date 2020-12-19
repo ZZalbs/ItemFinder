@@ -16,10 +16,6 @@
     </thead>
     <tbody>
         <tr th:each = "member : ${list}">
-<<<<<<< HEAD
-            member.
-        </tr>
-=======
             <td th:text="${member.m.id}"></td>
             <td th:text="${member.m.name}"></td>
             <td th:text="${member.items.name}"></td>
@@ -32,15 +28,7 @@
             <td th:text="${member.items.cooldown}"></td>
             <td><img th:src="@{${member.items.src}}" width="100px" height="100px"></td>
         </tr>
-            <td th:text="${member.itemID1}"></td>
-            <td th:text="${member.itemID2}"></td>
-            <td th:text="${member.itemID3}"></td>
-            <td th:text="${member.itemID4}"></td>
-            <td th:text="${member.itemID5}"></td>
-            <td th:text="${member.itemID6}"></td>
 
-
->>>>>>> 43b57915ad9f5da04586bb99d4156be1efe25b05
     </tbody>
 </table>
 
