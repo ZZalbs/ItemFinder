@@ -47,7 +47,6 @@ public class MemberController {
     }
 
     @GetMapping("/members") // 멤버 전체를 불러오는 함수
-    @PostMapping("/members/modify")
     public String memberList(Model model)
     {
         ArrayList<Member> m = ms.findMembers();
@@ -56,8 +55,10 @@ public class MemberController {
     }
 
     @GetMapping("/members/modify") // 멤버 회원가입창 오픈
-    public String modifyMember()
+    public String modifyMember(Model model)
     {
+        ArrayList<Member> m = ms.findMembers();
+        model.addAttribute("list",m);
         return "modifyMember";
     }
 
