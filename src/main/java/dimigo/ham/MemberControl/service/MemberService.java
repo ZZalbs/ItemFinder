@@ -1,5 +1,6 @@
 package dimigo.ham.MemberControl.service;
 
+import dimigo.ham.MemberControl.domain.ItemMember;
 import dimigo.ham.MemberControl.domain.Member;
 import dimigo.ham.MemberControl.repository.MemberRepository;
 //import dimigo.ham.MemberControl.repository.SpringDataJPAMemberRepository;
@@ -31,4 +32,6 @@ public class MemberService {
     {
         return memberRepository.findById(id);
     }
-}
+
+
+    }

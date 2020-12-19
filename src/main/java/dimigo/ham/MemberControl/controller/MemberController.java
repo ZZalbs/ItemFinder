@@ -57,7 +57,7 @@ public class MemberController {
     public String itemList(Model model)
     {
         ArrayList<ItemMember> im = is.findMembers();
-        model.addAttribute("list",m);
+        model.addAttribute("list",im);
         return "ItemList";
     }
 

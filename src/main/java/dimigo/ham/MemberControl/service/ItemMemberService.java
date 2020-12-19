@@ -1,6 +1,7 @@
 package dimigo.ham.MemberControl.service;
 
 import dimigo.ham.MemberControl.domain.ItemMember;
+import dimigo.ham.MemberControl.domain.Member;
 import dimigo.ham.MemberControl.repository.ItemMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,5 +22,9 @@ public class ItemMemberService {
     {
         itemmemberRepository.save(m);
         return 0;
+    }
+    public ArrayList<ItemMember> findMembers()
+    {
+        return itemmemberRepository.findAll();
     }
 }
