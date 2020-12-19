@@ -23,7 +23,7 @@
         <td th:text="${itemMember.armor}"></td>
         <td th:text="${itemMember.magic_resistance}"></td>
         <td th:text="${itemMember.cooldown}"></td>
-        <td><img src="'${itemMember.src}'+'.png'" width="100px" height="100px"></td>
+        <td><img th:src="''${itemMember.src}'+'.png'" width="100px" height="100px"></td>
     </tr>
     </tbody>
 
