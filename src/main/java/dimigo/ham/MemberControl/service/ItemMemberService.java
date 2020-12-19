@@ -22,4 +22,10 @@ public class ItemMemberService {
     {
         return itemmemberRepository.findAll();
     }
+    public ItemMember findOneMember(int id)
+    {
+        return itemmemberRepository.findById(id);
+    }
+
+
 }
