@@ -16,34 +16,6 @@
     </thead>
     <tbody>
         <tr th:each = "member : ${list}">
-<<<<<<< HEAD
-            <td th:text="${member.m.id}"></td>
-            <td th:text="${member.m.name}"></td>
-            <td th:text="${member.items.name}"></td>
-            <td th:text="${member.items.text}"></td>
-            <td th:text="${member.items.hp}"></td>
-            <td th:text="${member.items.ad}"></td>
-            <td th:text="${member.items.ap}"></td>
-            <td th:text="${member.items.armor}"></td>
-            <td th:text="${member.items.magic_resistance}"></td>
-            <td th:text="${member.items.cooldown}"></td>
-            <td><img th:src="@{${member.items.src}}" width="100px" height="100px"></td>
-        </tr>
-
-=======
-            <td th:text="${member.id}"></td>
-            <td th:text="${member.name}"></td>
-            <td th:text="${member.name}"></td>
-            <td th:text="${member.text}"></td>
-            <td th:text="${member.hp}"></td>
-            <td th:text="${member.ad}"></td>
-            <td th:text="${member.ap}"></td>
-            <td th:text="${member.armor}"></td>
-            <td th:text="${member.magic_resistance}"></td>
-            <td th:text="${member.cooldown}"></td>
-            <td><img th:src="@{${member.src}}" width="100px" height="100px"></td>
-        </tr>
->>>>>>> 2dd904a1f64013b008ec7404df2908884622e800
     </tbody>
 </table>
 
