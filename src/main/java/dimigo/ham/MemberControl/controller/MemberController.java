@@ -55,8 +55,10 @@ public class MemberController {
     }
 
     @GetMapping("/members/modify") // 멤버 회원가입창 오픈
-    public String modifyMember()
+    public String modifyMember(Model model)
     {
+        ArrayList<Member> m = ms.findMembers();
+        model.addAttribute("list",m);
         return "modifyMember";
     }
 
