@@ -21,7 +21,15 @@ public class MemberController {
         this.ms = ms;
         this.is=is;
     }
+    public class Ghost {
+        Member m;
+        ArrayList<ItemMember> items;
 
+        public Ghost(Member m, ArrayList<ItemMember> items) {
+            this.m = m;
+            this.items = items;
+        }
+    }
     @GetMapping("/members/new") // 멤버 회원가입창 오픈
     public String registerMember()
     {
@@ -47,12 +55,23 @@ public class MemberController {
     }
 
     @GetMapping("/members") // 멤버 전체를 불러오는 함수
-    public String memberList(Model model)
-    {
+    public String memberList(Model model) {
         ArrayList<Member> m = ms.findMembers();
         ArrayList<ItemMember> im = is.findMembers();
-        model.addAttribute("list",m);
-        model.addAttribute("items",im);
+        ArrayList<Ghost> g=new ArrayList<Ghost>();
+
+        for (int j=0;j<m.size();j++) {
+            ArrayList<ItemMember> I = new ArrayList<ItemMember>();
+            I.add(is.findOneMember(m.get(0).getItemID1()));
+            I.add(is.findOneMember(m.get(0).getItemID2()));
+            I.add(is.findOneMember(m.get(0).getItemID3()));
+            I.add(is.findOneMember(m.get(0).getItemID4()));
+            I.add(is.findOneMember(m.get(0).getItemID5()));
+            I.add(is.findOneMember(m.get(0).getItemID6()));
+            Ghost g1=new Ghost(m.get(j),I);
+            g.add(g1);
+        }
+        model.addAttribute("list",g);
         return "memberList";
     }
 
