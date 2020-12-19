@@ -51,7 +51,7 @@ public class MemberController {
     {
         ArrayList<Member> m = ms.findMembers();
         model.addAttribute("list",m);
-        return "memberList";    
+        return "memberList";
     }
 
     @GetMapping("/members/modify") // 멤버 회원가입창 오픈
@@ -61,11 +61,11 @@ public class MemberController {
     }
 
     @PostMapping("/members/modify") // 멤버 회원가입 함수
-    public String modifyMember(MemberForm mf,Model model,int id)
+    public String modifyMember(MemberForm mf,Model model)
     {
         ArrayList<Member> mlist = ms.findMembers();
         model.addAttribute("list",mlist);
-        Member m = ms.findOneMember(id);
+        Member m = ms.findOneMember(mf.getID());
         if(m!=null) {
             m.setItemID1(mf.getItemID1());
             m.setItemID2(mf.getItemID2());
