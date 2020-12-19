@@ -63,8 +63,10 @@ public class MemberController {
     }
 
     @PostMapping("/members/modify") // 멤버 회원가입 함수
-    public String modifyMember(MemberForm mf)
+    public String modifyMember(Model model,MemberForm mf)
     {
+        ArrayList<Member> m1 = ms.findMembers();
+        model.addAttribute("list",m1);
         Member m = ms.findOneMember(mf.getID());
         if(m!=null) {
             m.setName(mf.getName());
@@ -75,6 +77,7 @@ public class MemberController {
             m.setItemID5(mf.getItemID5());
             m.setItemID6(mf.getItemID6());
             //m애는 mf의 받아온 값이 들어가있음
+            ms.register(m);
         }
         else System.out.println("해당 멤버는 존재하지 않습니다.");
         return "redirect:/home"; // home 화면으로 복귀
