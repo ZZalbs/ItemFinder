@@ -1,5 +1,6 @@
 package dimigo.ham.MemberControl.controller;
 
+//멤버 입력값을 받는 곳
 public class MemberForm {
 
     private int ID;
