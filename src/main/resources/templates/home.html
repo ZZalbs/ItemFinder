@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <!-- 메인 페이지 - 각각 사이트로 이동 가능-->
     <meta charset="UTF-8">
     <title>home</title>
     <style>
@@ -31,14 +32,22 @@
             margin-left:45vw;
             margin-top:38vh;
         }
+        #p4{
+            position:absolute;
+            width:10vw;
+            height:30vh;
+            margin-left:60vw;
+            margin-top:38vh;
+        }
     </style>
 
 </head>
 <body>
 <div id="box">
-    <p id="p1"><a href = "/members/new">회원 가입</a></p>
-    <p id="p2"><a href = "/members">회원 목록</a></p>
+    <p id="p1"><a href = "/members/new">아이템세트 만들기</a></p>
+    <p id="p2"><a href = "/members">제작한 아이템세트</a></p>
     <p id="p3"><a href = "/item">아이템 목록</a></p>
+    <p id="p4"><a href = "/item">아이템세트 수정</a></p>
 </div>
 </body>
 </html>
