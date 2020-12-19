@@ -18,11 +18,6 @@ public class ItemMemberService {
     public ItemMemberService(ItemMemberRepository itemmemberRepository) {
         this.itemmemberRepository = itemmemberRepository;
     }
-    public int register(ItemMember m)
-    {
-        itemmemberRepository.save(m);
-        return 0;
-    }
     public ArrayList<ItemMember> findMembers()
     {
         return itemmemberRepository.findAll();
