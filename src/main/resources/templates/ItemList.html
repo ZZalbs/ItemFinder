@@ -23,11 +23,11 @@
         <td th:text="${itemMember.armor}"></td>
         <td th:text="${itemMember.magic_resistance}"></td>
         <td th:text="${itemMember.cooldown}"></td>
-
         <td><img th:src="@{${itemMember.src}}" width="100px" height="100px"></td>
     </tr>
     </tbody>
 </table>
+<br>
 <form action = "/home" method = "post">
     <input type = "submit" value = "돌아가기">
 </form>
