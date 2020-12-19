@@ -22,8 +22,9 @@ public class SpringConfigure {
     private MemberRepository memberRepository;
     private ItemMemberRepository itemmemberRepository;
 
-    public SpringConfigure(MemberRepository memberRepository) {
+    public SpringConfigure(MemberRepository memberRepository, ItemMemberRepository itemmemberRepository) {
         this.memberRepository = memberRepository;
+        this.itemmemberRepository=itemmemberRepository;
     }
 
     @Bean
