@@ -66,6 +66,7 @@ public class MemberController {
     {
         Member m = ms.findOneMember(mf.getID());
         if(m!=null) {
+            m.setName(mf.getName());
             m.setItemID1(mf.getItemID1());
             m.setItemID2(mf.getItemID2());
             m.setItemID3(mf.getItemID3());
