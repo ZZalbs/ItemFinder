@@ -47,6 +47,7 @@ public class MemberController {
     }
 
     @GetMapping("/members") // 멤버 전체를 불러오는 함수
+    @PostMapping("/members/modify")
     public String memberList(Model model)
     {
         ArrayList<Member> m = ms.findMembers();
@@ -61,10 +62,8 @@ public class MemberController {
     }
 
     @PostMapping("/members/modify") // 멤버 회원가입 함수
-    public String modifyMember(MemberForm mf,Model model)
+    public String modifyMember(MemberForm mf)
     {
-        ArrayList<Member> mlist = ms.findMembers();
-        model.addAttribute("list",mlist);
         Member m = ms.findOneMember(mf.getID());
         if(m!=null) {
             m.setItemID1(mf.getItemID1());
