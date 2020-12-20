@@ -30,12 +30,15 @@
                 <td th:text="${item.magic_resistance}"></td>
                 <td th:text="${item.cooldown}"></td>
                 <td><img th:src="@{${item.src}}" width="100px" height="100px"></td>
-
             </tr>
 
         </tr>
     </tbody>
 </table>
+<form action="/member/check" method="post">
+    확인하고 싶은 아이템세트의 이름은 : <input type="text" name="itemname" />
+    <input type = "submit" value = "돌아가기">
+</form>
 
 <form action = "/home" method = "post">
     <input type = "submit" value = "돌아가기">

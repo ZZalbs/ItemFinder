@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 
@@ -106,6 +107,13 @@ public class MemberController {
         }
         else System.out.println("해당 멤버는 존재하지 않습니다.");
         return "redirect:/home"; // home 화면으로 복귀
+    }
+
+    @GetMapping("/members/check") // 멤버 아이템 세트 확인창
+    public String checkMember(@RequestParam(value="itemname") String name)
+    {
+
+        return "MemberCheck";
     }
 
     @GetMapping("/item") // 아이템 목록 전체를 불러오는 함수
