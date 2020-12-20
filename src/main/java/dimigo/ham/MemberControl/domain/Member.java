@@ -2,7 +2,7 @@ package dimigo.ham.MemberControl.domain;
 
 import javax.persistence.*;
 
-@Entity @Table(name="itemset")
+@Entity @Table(name="itemset")//db에 있는 itemset 테이블을 구현
 public class Member {
 
     @Id @GeneratedValue(strategy  = GenerationType.IDENTITY)
