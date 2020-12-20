@@ -32,8 +32,10 @@ public class MemberController {
         }
     }*/
     @GetMapping("/members/new") // 멤버 회원가입창 오픈
-    public String registerMember()
+    public String registerMember(Model model)
     {
+        ArrayList<ItemMember> im = is.findMembers();
+        model.addAttribute("items",im);
         return "registerMember";
     }
 

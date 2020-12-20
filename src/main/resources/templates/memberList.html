@@ -18,13 +18,12 @@
         <tr th:each = "member : ${list}">
             <td th:text="${member.id}"></td>
             <td th:text="${member.name}"></td>
-
         </tr>
     </tbody>
 </table>
 <form action="/member/check" method="post">
     확인하고 싶은 아이템세트의 이름은 : <input type="text" name="id" />
-    <input type = "submit" value = "돌아가기">
+    <input type = "submit" value = "확인">
 </form>
 
 <form action = "/home" method = "post">
