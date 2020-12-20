@@ -18,7 +18,7 @@ public class SpringConfigure {
 
     //private  DataSource dataSource;
     //private  EntityManager em;
-
+    //멤버리포지토리와 아이템멤버리포지토리 bean 객체 생성
     private MemberRepository memberRepository;
     private ItemMemberRepository itemmemberRepository;
 
