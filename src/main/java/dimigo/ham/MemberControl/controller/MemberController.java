@@ -109,10 +109,19 @@ public class MemberController {
         return "redirect:/home"; // home 화면으로 복귀
     }
 
-    @GetMapping("/members/check") // 멤버 아이템 세트 확인창
-    public String checkMember(@RequestParam(value="itemname") String name)
+    @PostMapping("/member/check") // 멤버 아이템 세트 확인창
+    public String checkMember(Model model, @RequestParam(value="id") int id)
     {
-
+        ArrayList<Member> m=ms.findMembers();
+        id--;
+        ArrayList<ItemMember> I = new ArrayList<ItemMember>();
+        I.add(is.findOneMember(m.get(id).getItemID1()));
+        I.add(is.findOneMember(m.get(id).getItemID2()));
+        I.add(is.findOneMember(m.get(id).getItemID3()));
+        I.add(is.findOneMember(m.get(id).getItemID4()));
+        I.add(is.findOneMember(m.get(id).getItemID5()));
+        I.add(is.findOneMember(m.get(id).getItemID6()));
+        model.addAttribute("items",I);
         return "MemberCheck";
     }
 
