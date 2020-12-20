@@ -73,8 +73,9 @@ public class MemberController {
 
         }
         System.out.println(I.get(0).getId());
-        model.addAttribute("list",m);
         model.addAttribute("items",I);
+        model.addAttribute("list",m);
+
         return "memberList";
     }
 

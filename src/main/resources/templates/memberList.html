@@ -16,9 +16,9 @@
     </thead>
     <tbody>
         <tr th:each = "member : ${list}">
-            <a href="#ch"+ th:text="${member.id}"><td th:text="${member.id}"></td></a>
+            <td th:text="${member.id}"></td>
             <td th:text="${member.name}"></td>
-            <p id="ch"+ th:text="${member.id}"></p>
+
             <tr th:each = "item : ${items}">
                 <td th:text="${item.id}"></td>
                 <td th:text="${item.name}"></td>
@@ -30,7 +30,9 @@
                 <td th:text="${item.magic_resistance}"></td>
                 <td th:text="${item.cooldown}"></td>
                 <td><img th:src="@{${item.src}}" width="100px" height="100px"></td>
+
             </tr>
+
         </tr>
     </tbody>
 </table>
