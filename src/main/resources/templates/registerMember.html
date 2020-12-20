@@ -33,7 +33,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each = "itemMember : ${list}">
+    <tr th:each = "itemMember : ${items}">
         <td th:text="${itemMember.id}"></td>
         <td><img th:src="@{${itemMember.src}}" width="100px" height="100px"></td>
         <td th:text="${itemMember.name}"></td>

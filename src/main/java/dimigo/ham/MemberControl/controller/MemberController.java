@@ -31,13 +31,6 @@ public class MemberController {
             this.items = items;
         }
     }*/
-    @GetMapping("/members/new") // 멤버 회원가입창 오픈
-    public String registerMember(Model model)
-    {
-        ArrayList<ItemMember> im = is.findMembers();
-        model.addAttribute("items",im);
-        return "registerMember";
-    }
 
     @PostMapping("/members/new") // 멤버 회원가입 함수
     public String register(MemberForm mf)
@@ -127,12 +120,6 @@ public class MemberController {
         return "MemberCheck";
     }
 
-    @GetMapping("/item") // 아이템 목록 전체를 불러오는 함수
-    public String itemList(Model model)
-    {
-        ArrayList<ItemMember> im = is.findMembers();
-        model.addAttribute("list",im);
-        return "ItemList";
-    }
+
 
 }
