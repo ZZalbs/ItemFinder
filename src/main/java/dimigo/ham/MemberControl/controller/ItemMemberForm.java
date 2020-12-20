@@ -1,5 +1,5 @@
 package dimigo.ham.MemberControl.controller;
-
+//아이템과 관련된 멤버 입력값을 받는 곳
 public class ItemMemberForm {
     private int id;
     private String name;

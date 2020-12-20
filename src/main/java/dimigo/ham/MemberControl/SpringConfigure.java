@@ -14,7 +14,7 @@ import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 
 @Configuration
-public class SpringConfigure {
+public class SpringConfigure {//MemberRepository와 ItemMemberRepository의 bean 객체 생성
 
     //private  DataSource dataSource;
     //private  EntityManager em;

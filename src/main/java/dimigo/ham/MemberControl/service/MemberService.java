@@ -8,7 +8,7 @@ import javax.transaction.Transactional;
 import java.util.ArrayList;
 
 @Transactional
-public class MemberService {
+public class MemberService {//콘트롤러에서 활용할 Member와 관련된 함수들 구현
 
     private MemberRepository memberRepository;
 
@@ -24,11 +24,11 @@ public class MemberService {
     public ArrayList<Member> findMembers()
     {
         return memberRepository.findAll();
-    }
+    }//모든 Member를 찾아 ArrayList<Member> 형태로 반환하는 함수
     public Member findOneMember(int id)
     {
         return memberRepository.findById(id);
-    }
+    }//받은 id에 해당하는 Member를 반환하는 함수
 
 
     }

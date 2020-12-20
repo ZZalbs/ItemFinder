@@ -18,19 +18,10 @@ public class MemberController {
     private  MemberService ms;
     private ItemMemberService is;
 
-    public MemberController(MemberService ms,ItemMemberService is) {
+    public MemberController(MemberService ms,ItemMemberService is) {//생성자
         this.ms = ms;
         this.is=is;
     }
-    /*public class Ghost {
-        Member m;
-        ArrayList<ItemMember> items;
-
-        public Ghost(Member m, ArrayList<ItemMember> items) {
-            this.m = m;
-            this.items = items;
-        }
-    }*/
 
     @PostMapping("/members/new") // 멤버 회원가입 함수
     public String register(MemberForm mf)
@@ -72,7 +63,7 @@ public class MemberController {
         model.addAttribute("items",I);
         model.addAttribute("list",m);
 
-        return "memberList";
+        return "memberList";//memberList.html 으로 이동
     }
 
     @GetMapping("/members/modify") // 멤버 회원가입창 오픈
@@ -80,7 +71,7 @@ public class MemberController {
     {
         ArrayList<Member> m = ms.findMembers();
         model.addAttribute("list",m);
-        return "modifyMember";
+        return "modifyMember";//modifyMember.html 으로 이동
     }
 
     @PostMapping("/members/modify") // 멤버 회원가입 함수
@@ -117,7 +108,7 @@ public class MemberController {
         I.add(is.findOneMember(m.get(id).getItemID5()));
         I.add(is.findOneMember(m.get(id).getItemID6()));
         model.addAttribute("items",I);
-        return "MemberCheck";
+        return "MemberCheck"; //MemberCheck.html 으로 이동
     }
 
 
